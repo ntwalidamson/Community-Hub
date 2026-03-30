@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1>Community Hub</h1>
+    <nav>
+      <a href="#listings">Browse</a>
+      <a href="#submit">Share</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Discover What's Happening Around You</h2>
+    <p>Events, businesses, and opportunities near you</p>
+    <input type="text" placeholder="Search...">
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" class="listings">
+    <h2>Latest Listings</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Game Dev Workshop</h3>
+        <p>Learn game development basics this Saturday.</p>
+        <span>📍 School Compound</span>
+      </div>
+
+      <div class="card">
+        <h3>Local Coffee Shop</h3>
+        <p>Fresh coffee and free WiFi available daily.</p>
+        <span>📍 Downtown</span>
+      </div>
+
+      <div class="card">
+        <h3>Design Opportunity</h3>
+        <p>Looking for a creative student designer.</p>
+        <span>📍 Remote</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submit -->
+  <section id="submit" class="submit">
+    <h2>Share Something</h2>
+    <form>
+      <input type="text" placeholder="Title" required>
+      <input type="text" placeholder="Location" required>
+
+      <select required>
+        <option value="">Category</option>
+        <option>Event</option>
+        <option>Business</option>
+        <option>Opportunity</option>
+      </select>
+
+      <textarea placeholder="Description" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Community Hub</p>
+  </footer>
+
+</body>
+</html>
