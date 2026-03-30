@@ -26,6 +26,12 @@
 
   <section id="listings" class="listings">
     <h2>Recent Listings</h2>
+    <div class="filters">
+      <button class="filter-btn">All</button>
+      <button class="filter-btn">Event</button>
+      <button class="filter-btn">Business</button>
+      <button class="filter-btn">Opportunity</button>
+    </div>
     <div class="cards">
       <div class="card">
         <h3>Mini Game Dev Workshop</h3>
@@ -64,6 +70,32 @@
   <footer>
     <p>Made by Damson for Hack Club Vibes One</p>
   </footer>
+
+  <button id="backToTop">Back to Top</button>
+
+  <script>
+    // Smooth scroll for nav links
+    const navLinks = document.querySelectorAll('header nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+      });
+    });
+
+    // Back to top button
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 300){
+        backBtn.style.display = 'block';
+      } else {
+        backBtn.style.display = 'none';
+      }
+    });
+    backBtn.addEventListener('click', () => {
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  </script>
 
 </body>
 </html>

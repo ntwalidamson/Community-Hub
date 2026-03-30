@@ -8,6 +8,7 @@
 body {
   background-color: #111;
   color: #ddd;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -45,7 +46,7 @@ header nav a:hover {
   height: auto;
   border-radius: 15px;
   margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 20px rgba(38, 77, 82, 0.973);
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -72,7 +73,7 @@ header nav a:hover {
 }
 
 .hero input::placeholder {
-  color: #888;
+  color: #203349;
 }
 
 .listings {
@@ -81,8 +82,27 @@ header nav a:hover {
 
 .listings h2 {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   font-size: 1.9rem;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.filter-btn {
+  padding: 8px 15px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #bb86fc;
+  color: #111;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background-color: #a873f0;
 }
 
 .cards {
@@ -92,15 +112,15 @@ header nav a:hover {
 }
 
 .card {
-  background-color: #1e1e1e;
+  background-color: #0f2231;
   padding: 20px;
   border-radius: 12px;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(187, 134, 252, 0.2);
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(187, 134, 252, 0.25);
 }
 
 .card h3 {
@@ -152,22 +172,39 @@ form button {
   padding: 12px;
   border: none;
   border-radius: 10px;
-  background-color: #bb86fc;
+  background-color: #211430;
   color: #111;
   font-weight: 600;
   cursor: pointer;
 }
 
 form button:hover {
-  background-color: #a873f0;
+  background-color: #142231;
 }
 
 footer {
   padding: 20px;
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: #132c41;
   color: #888;
   margin-top: 40px;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  background-color: #bb86fc;
+  color: #111;
+  border: none;
+  border-radius: 10px;
+  display: none;
+  cursor: pointer;
+}
+
+#backToTop:hover {
+  background-color: #a873f0;
 }
 
 @media(min-width: 600px) {
