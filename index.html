@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Vibes One Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <header>
-    <h1>Community Hub</h1>
+    <h1>Vibes One Workshop Hub</h1>
     <nav>
       <a href="#listings">Browse</a>
       <a href="#submit">Share</a>
@@ -17,50 +18,51 @@
   </header>
 
   <section class="hero">
-    <h2>Discover What's Around You</h2>
-    <p>Events, businesses, and opportunities nearby</p>
-    <input type="text" placeholder="Search for anything...">
+    <img src="hero-image.jpg" alt="Community Workshop" class="hero-image">
+    <h2>Join the Vibes One Community</h2>
+    <p>Check out events, local opportunities, and cool projects from your classmates.</p>
+    <input type="text" placeholder="Search for events or ideas…">
   </section>
 
   <section id="listings" class="listings">
-    <h2>Latest Listings</h2>
+    <h2>Recent Listings</h2>
     <div class="cards">
       <div class="card">
-        <h3>Game Dev Workshop</h3>
-        <p>Learn game development basics this Saturday.</p>
+        <h3>Mini Game Dev Workshop</h3>
+        <p>Come join our mini game dev workshop this Saturday. Everyone’s welcome!</p>
         <span>School Compound</span>
       </div>
       <div class="card">
-        <h3>Local Coffee Shop</h3>
-        <p>Fresh coffee and free WiFi available daily.</p>
+        <h3>Coffee Club Meetup</h3>
+        <p>Chat with friends over some local coffee. Casual and fun.</p>
         <span>Downtown</span>
       </div>
       <div class="card">
-        <h3>Design Opportunity</h3>
-        <p>Looking for a creative student designer.</p>
+        <h3>Student Design Project</h3>
+        <p>Looking for creative classmates to help make posters and flyers.</p>
         <span>Remote</span>
       </div>
     </div>
   </section>
 
   <section id="submit" class="submit">
-    <h2>Share Something</h2>
+    <h2>Share Your Listing</h2>
     <form>
-      <input type="text" placeholder="Title" required>
-      <input type="text" placeholder="Location" required>
+      <input type="text" placeholder="Title of your event or idea" required>
+      <input type="text" placeholder="Where is this happening?" required>
       <select required>
-        <option value="">Category</option>
+        <option value="">Pick a category</option>
         <option>Event</option>
         <option>Business</option>
         <option>Opportunity</option>
       </select>
-      <textarea placeholder="Description" required></textarea>
-      <button type="submit">Submit</button>
+      <textarea placeholder="Describe it in a few words" required></textarea>
+      <button type="submit">Share It</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2026 Community Hub</p>
+    <p>Made by Damson for Hack Club Vibes One</p>
   </footer>
 
 </body>

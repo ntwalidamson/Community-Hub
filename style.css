@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: #111;
+  color: #ddd;
 }
 
 header {
@@ -15,20 +15,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #1f1f1f;
+  background-color: #1a1a1a;
 }
 
 header h1 {
   font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 1.8rem;
 }
 
 header nav a {
-  margin-left: 25px;
-  color: #e0e0e0;
+  margin-left: 20px;
+  color: #ddd;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
 }
 
 header nav a:hover {
@@ -37,30 +35,40 @@ header nav a:hover {
 
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+  padding: 70px 20px;
+  background: linear-gradient(120deg, #1a1a1a, #222);
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  color: #aaa;
   margin-bottom: 20px;
-  color: #b0b0b0;
 }
 
 .hero input {
-  padding: 12px 20px;
-  width: 90%;
+  padding: 12px 15px;
+  width: 85%;
   max-width: 400px;
-  border: none;
   border-radius: 10px;
-  background-color: #1f1f1f;
-  color: #e0e0e0;
-  outline: none;
+  border: none;
+  background-color: #1e1e1e;
+  color: #ddd;
 }
 
 .hero input::placeholder {
@@ -68,63 +76,62 @@ header nav a:hover {
 }
 
 .listings {
-  padding: 60px 20px;
+  padding: 50px 20px;
 }
 
 .listings h2 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
+  margin-bottom: 35px;
+  font-size: 1.9rem;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 25px;
+  gap: 20px;
 }
 
 .card {
   background-color: #1e1e1e;
-  padding: 25px;
-  border-radius: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(187, 134, 252, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(187, 134, 252, 0.2);
 }
 
 .card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
   color: #bb86fc;
+  margin-bottom: 8px;
 }
 
 .card p {
   color: #ccc;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .card span {
-  font-size: 0.9rem;
   color: #888;
+  font-size: 0.9rem;
 }
 
 .submit {
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .submit h2 {
-  margin-bottom: 30px;
-  font-size: 2rem;
+  margin-bottom: 25px;
+  font-size: 1.9rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -134,13 +141,11 @@ form input, form select, form textarea {
   border-radius: 10px;
   border: none;
   background-color: #1e1e1e;
-  color: #e0e0e0;
-  outline: none;
+  color: #ddd;
 }
 
 form textarea {
-  min-height: 120px;
-  resize: none;
+  min-height: 100px;
 }
 
 form button {
@@ -148,31 +153,30 @@ form button {
   border: none;
   border-radius: 10px;
   background-color: #bb86fc;
-  color: #121212;
+  color: #111;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 form button:hover {
-  background-color: #9f5cff;
+  background-color: #a873f0;
 }
 
 footer {
+  padding: 20px;
   text-align: center;
-  padding: 25px;
-  background-color: #1f1f1f;
-  margin-top: 40px;
+  background-color: #1a1a1a;
   color: #888;
+  margin-top: 40px;
 }
 
-@media (min-width: 600px) {
+@media(min-width: 600px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900px) {
+@media(min-width: 900px) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
