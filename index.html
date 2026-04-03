@@ -26,24 +26,28 @@
 
   <section id="listings" class="listings">
     <h2>Recent Listings</h2>
+
     <div class="filters">
       <button class="filter-btn">All</button>
       <button class="filter-btn">Event</button>
       <button class="filter-btn">Business</button>
       <button class="filter-btn">Opportunity</button>
     </div>
+
     <div class="cards">
-      <div class="card">
+      <div class="card" data-category="Event">
         <h3>Mini Game Dev Workshop</h3>
         <p>Come join our mini game dev workshop this Saturday. Everyone’s welcome!</p>
         <span>School Compound</span>
       </div>
-      <div class="card">
+
+      <div class="card" data-category="Business">
         <h3>Coffee Club Meetup</h3>
         <p>Chat with friends over some local coffee. Casual and fun.</p>
         <span>Downtown</span>
       </div>
-      <div class="card">
+
+      <div class="card" data-category="Opportunity">
         <h3>Student Design Project</h3>
         <p>Looking for creative classmates to help make posters and flyers.</p>
         <span>Remote</span>
@@ -56,13 +60,16 @@
     <form>
       <input type="text" placeholder="Title of your event or idea" required>
       <input type="text" placeholder="Where is this happening?" required>
+
       <select required>
         <option value="">Pick a category</option>
         <option>Event</option>
         <option>Business</option>
         <option>Opportunity</option>
       </select>
+
       <textarea placeholder="Describe it in a few words" required></textarea>
+
       <button type="submit">Share It</button>
     </form>
   </section>
@@ -71,30 +78,93 @@
     <p>Made by Damson for Hack Club Vibes One</p>
   </footer>
 
-  <button id="backToTop">Back to Top</button>
+  <button id="backToTop">Top</button>
 
   <script>
-    // Smooth scroll for nav links
-    const navLinks = document.querySelectorAll('header nav a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(link.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
-      });
-    });
+    const form = document.querySelector("form")
+    const cardsContainer = document.querySelector(".cards")
+    const searchInput = document.querySelector(".hero input")
+    const filterBtns = document.querySelectorAll(".filter-btn")
 
-    // Back to top button
-    const backBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
+    let currentFilter = "All"
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault()
+
+      const inputs = form.querySelectorAll("input")
+      const title = inputs[0].value
+      const location = inputs[1].value
+      const category = form.querySelector("select").value
+      const desc = form.querySelector("textarea").value
+
+      if(!title || !location || !category || !desc) return
+
+      const newCard = document.createElement("div")
+      newCard.classList.add("card")
+      newCard.setAttribute("data-category", category)
+
+      newCard.innerHTML = `
+        <h3>${title}</h3>
+        <p>${desc}</p>
+        <span>${location}</span>
+      `
+
+      cardsContainer.prepend(newCard)
+
+      form.reset()
+    })
+
+    searchInput.addEventListener("input", function(){
+      const value = searchInput.value.toLowerCase()
+      const cards = document.querySelectorAll(".card")
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase()
+
+        if(text.includes(value)){
+          if(currentFilter === "All" || card.getAttribute("data-category") === currentFilter){
+            card.style.display = "block"
+          } else {
+            card.style.display = "none"
+          }
+        } else {
+          card.style.display = "none"
+        }
+      })
+    })
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", function(){
+        currentFilter = btn.innerText
+        const cards = document.querySelectorAll(".card")
+
+        cards.forEach(card => {
+          if(currentFilter === "All"){
+            card.style.display = "block"
+          } else {
+            if(card.getAttribute("data-category") === currentFilter){
+              card.style.display = "block"
+            } else {
+              card.style.display = "none"
+            }
+          }
+        })
+      })
+    })
+
+    const backBtn = document.getElementById("backToTop")
+
+    window.addEventListener("scroll", function(){
       if(window.scrollY > 300){
-        backBtn.style.display = 'block';
+        backBtn.style.display = "block"
       } else {
-        backBtn.style.display = 'none';
+        backBtn.style.display = "none"
       }
-    });
-    backBtn.addEventListener('click', () => {
-      window.scrollTo({top:0, behavior:'smooth'});
-    });
+    })
+
+    backBtn.addEventListener("click", function(){
+      window.scrollTo({top: 0, behavior: "smooth"})
+    })
   </script>
 
 </body>

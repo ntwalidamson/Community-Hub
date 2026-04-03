@@ -8,7 +8,6 @@
 body {
   background-color: #111;
   color: #ddd;
-  scroll-behavior: smooth;
 }
 
 header {
@@ -17,11 +16,6 @@ header {
   align-items: center;
   padding: 20px 40px;
   background-color: #1a1a1a;
-}
-
-header h1 {
-  font-weight: 600;
-  font-size: 1.8rem;
 }
 
 header nav a {
@@ -43,99 +37,53 @@ header nav a:hover {
 .hero-image {
   width: 100%;
   max-width: 600px;
-  height: auto;
   border-radius: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(38, 77, 82, 0.973);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero h2 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: #aaa;
   margin-bottom: 20px;
 }
 
 .hero input {
-  padding: 12px 15px;
-  width: 85%;
+  padding: 12px;
+  width: 80%;
   max-width: 400px;
   border-radius: 10px;
   border: none;
-  background-color: #1e1e1e;
+  background: #1e1e1e;
   color: #ddd;
-}
-
-.hero input::placeholder {
-  color: #203349;
 }
 
 .listings {
   padding: 50px 20px;
 }
 
-.listings h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.9rem;
-}
-
 .filters {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .filter-btn {
-  padding: 8px 15px;
-  margin: 0 5px;
+  padding: 8px 14px;
+  margin: 5px;
   border: none;
   border-radius: 8px;
-  background-color: #bb86fc;
+  background: #bb86fc;
   color: #111;
   cursor: pointer;
 }
 
-.filter-btn:hover {
-  background-color: #a873f0;
-}
-
 .cards {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 .card {
-  background-color: #0f2231;
+  background: #1e1e1e;
   padding: 20px;
   border-radius: 12px;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 0 8px 25px rgba(187, 134, 252, 0.25);
-}
-
-.card h3 {
-  color: #bb86fc;
-  margin-bottom: 8px;
-}
-
-.card p {
-  color: #ccc;
-  margin-bottom: 8px;
-}
-
-.card span {
-  color: #888;
-  font-size: 0.9rem;
 }
 
 .submit {
@@ -143,77 +91,50 @@ header nav a:hover {
   text-align: center;
 }
 
-.submit h2 {
-  margin-bottom: 25px;
-  font-size: 1.9rem;
-}
-
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   max-width: 500px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 form input, form select, form textarea {
   padding: 12px;
   border-radius: 10px;
   border: none;
-  background-color: #1e1e1e;
+  background: #1e1e1e;
   color: #ddd;
-}
-
-form textarea {
-  min-height: 100px;
 }
 
 form button {
   padding: 12px;
   border: none;
   border-radius: 10px;
-  background-color: #211430;
+  background: #bb86fc;
   color: #111;
-  font-weight: 600;
   cursor: pointer;
 }
 
-form button:hover {
-  background-color: #142231;
-}
-
 footer {
-  padding: 20px;
   text-align: center;
-  background-color: #132c41;
-  color: #888;
-  margin-top: 40px;
+  padding: 20px;
+  color: #777;
 }
 
 #backToTop {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px 15px;
-  background-color: #bb86fc;
-  color: #111;
+  bottom: 25px;
+  right: 25px;
+  padding: 10px;
   border: none;
   border-radius: 10px;
+  background: #bb86fc;
   display: none;
   cursor: pointer;
 }
 
-#backToTop:hover {
-  background-color: #a873f0;
-}
-
-@media(min-width: 600px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media(min-width: 900px) {
+@media(min-width: 700px){
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
